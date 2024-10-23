@@ -6,12 +6,17 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Card from "./Components/Card";
 import Banner from "./Components/Banner";
+import Form from "./Components/Form";
+import { useSelector } from "react-redux";
 
 function App() {
+  const count = useSelector ((state) => state.counter.value)
   return (
     <>
-    <div className="bg-slate-600">
+    <div className="">
+      {count}
     <Navbar />
+    {/* <Form/> */}
     <Banner/>
     <Card title={'helo this is suhani'} />
     <Footer/>
